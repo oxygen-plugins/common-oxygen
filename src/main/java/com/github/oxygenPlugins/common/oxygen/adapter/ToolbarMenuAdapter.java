@@ -23,7 +23,7 @@ public class ToolbarMenuAdapter implements ToolbarComponentsCustomizer, MenuBarC
 
 	@Override
 	public void customizeToolbar(ToolbarInfo toolbar) {
-		if(toolbar.getToolbarID().equals("Validate")){
+		if(toolbar.getToolbarID().equals("Validate") || toolbar.getToolbarID().equals("Validation")){
 			String id = toolbar.getToolbarID();
 			JComponent validationComp = toolbar.getComponents()[0];
 			if(validationComp instanceof AbstractButton){
