@@ -1,14 +1,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.schematron-quickfix</groupId>
+	<groupId>com.github.oxygen-plugins</groupId>
 	<artifactId>common-oxygen</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0-SNAPSHOT</version>
+	<url>https://github.com/oxygen-plugins/common-oxygen</url>
+	
+	<licenses>
+		<license>
+			<name>GNU General Public License (GPL)</name>
+			<url>http://www.gnu.org/licenses/gpl.txt</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>Nico Kutscherauer</name>
+			<email>nico@nkutsche.com</email>
+			<url>https://www.github.com/nkutsche</url>
+		</developer>
+	</developers>
+	
 	<dependencies>
 		<dependency>
 			<groupId>com.github.oxygen-plugins</groupId>
 			<artifactId>common-gui</artifactId>
-			<version>v0.0.1-alpha</version>
+			<version>0.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.oxygenxml</groupId>
@@ -20,8 +36,12 @@
 
 	<repositories>
 		<repository>
-			<id>jitpack.io</id>
-			<url>https://jitpack.io</url>
+			<id>oxygen-plugins-mvn-repo</id>
+			<url>https://raw.github.com/oxygen-plugins/mvn-repos/master/</url>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
 		</repository>
 		<repository>
 			<id>oxygen</id>
@@ -41,5 +61,13 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<distributionManagement>
+		<repository>
+			<id>remote.repo</id>
+			<name>Remote to GitHub project</name>
+			<url>file://${distribution.project}</url>
+		</repository>
+	</distributionManagement>
 	
 </project>
